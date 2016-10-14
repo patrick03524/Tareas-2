@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int convertir(char *a)
+{
+    while (a>='A'&&a<='Z')
+        return *a+'a'-'A';
+
+}
+void strcat(char *s,char *t)
+{
+    for(;*s!='\0';s++)
+        ;
+    for(;*t!='\0';s++,t++)
+        *s=*t;
+}
+int strend(char *s,char *t,int i)
+{
+    if (s[i]==t[0])
+        return 1;
+    else
+        return 0;
+}
+int main()
+{
+   char a;
+   a='F';
+   printf("La letra %c en minuscula es %c\n",a,convertir(a));
+
+    char s[20]="SPORT";
+    char t[10]="TUHMNA";
+    strcat(s,t);
+    printf("%s",s);
+
+    int i;
+    i=6;
+    char c[6]="Holalo";
+    char d[1]="o";
+    char *pc;
+    char *pd;
+    pc=&c;
+    pd=&d[0];
+    printf("%d",strend(*pc,*pd,i));
+
+
+
+
+
+
+}
